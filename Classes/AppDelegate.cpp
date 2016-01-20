@@ -1,6 +1,7 @@
 #include "AppDelegate.h"
 #include "GameScene.h"
 #include "UseSqlite.hpp"
+#include "TutorialModal.hpp"
 #include "PluginGoogleAnalytics/PluginGoogleAnalytics.h"
 
 USING_NS_CC;
@@ -49,6 +50,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // create a scene. it's an autorelease object
     auto scene = GameScene::createScene();
+    auto tutorial = TutorialModal::create();
+    scene->addChild(tutorial);
 //    auto scene = UseSqlite::createScene();
     // run
     director->runWithScene(scene);

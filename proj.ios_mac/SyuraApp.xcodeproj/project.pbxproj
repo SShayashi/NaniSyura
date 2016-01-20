@@ -54,6 +54,7 @@
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		6ACA4EDF80795D20E05D2A24 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 73AA49279B925CF149E1FF03 /* libsqlite3.dylib */; };
 		770943EC863B46B4B3A58C59 /* sdkbox_config.json in Resources */ = {isa = PBXBuildFile; fileRef = C4E749E38A74DC91352BA6B3 /* sdkbox_config.json */; };
+		790319F61C4FE3D1005D78FB /* TutorialModal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 790319F41C4FE3D1005D78FB /* TutorialModal.cpp */; };
 		794EF6581C4F745A0070FDEB /* ComicListModal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 794EF6251C4F745A0070FDEB /* ComicListModal.cpp */; };
 		794EF6591C4F745A0070FDEB /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 794EF6261C4F745A0070FDEB /* GameScene.cpp */; };
 		794EF65A1C4F745A0070FDEB /* sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 794EF6271C4F745A0070FDEB /* sqlite */; };
@@ -173,6 +174,8 @@
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		73AA49279B925CF149E1FF03 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
+		790319F41C4FE3D1005D78FB /* TutorialModal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TutorialModal.cpp; sourceTree = "<group>"; };
+		790319F51C4FE3D1005D78FB /* TutorialModal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TutorialModal.hpp; sourceTree = "<group>"; };
 		794EF6251C4F745A0070FDEB /* ComicListModal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ComicListModal.cpp; sourceTree = "<group>"; };
 		794EF6261C4F745A0070FDEB /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
 		794EF6271C4F745A0070FDEB /* sqlite */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sqlite; sourceTree = "<group>"; };
@@ -482,11 +485,13 @@
 				794EF62B1C4F745A0070FDEB /* CharaDetailModal.cpp */,
 				794EF62E1C4F745A0070FDEB /* CharaDetailModal.h */,
 				794EF62C1C4F745A0070FDEB /* ClearModal.cpp */,
+				794EF6311C4F745A0070FDEB /* ClearModal.h */,
 				794EF62D1C4F745A0070FDEB /* LoseModal.cpp */,
+				794EF6321C4F745A0070FDEB /* LoseModal.h */,
 				794EF6251C4F745A0070FDEB /* ComicListModal.cpp */,
 				794EF62F1C4F745A0070FDEB /* ComicListModal.h */,
-				794EF6311C4F745A0070FDEB /* ClearModal.h */,
-				794EF6321C4F745A0070FDEB /* LoseModal.h */,
+				790319F41C4FE3D1005D78FB /* TutorialModal.cpp */,
+				790319F51C4FE3D1005D78FB /* TutorialModal.hpp */,
 			);
 			name = ModalLayer;
 			sourceTree = "<group>";
@@ -659,6 +664,7 @@
 				794EF6611C4F745A0070FDEB /* UseSqlite.cpp in Sources */,
 				794EF65B1C4F745A0070FDEB /* TopModal.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				790319F61C4FE3D1005D78FB /* TutorialModal.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
