@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include "cocos2d.h"
-#include "CocosGUI.h"
+#include "ui/CocosGUI.h"
 #include "TopScroll.h"
 #include "UseSqlite.hpp"
 #include "SimpleAudioEngine.h"
@@ -28,7 +28,7 @@ protected:
     //音処理クラスのインスタンス作成
     CocosDenshion::SimpleAudioEngine* soundEngineSE = CocosDenshion::SimpleAudioEngine::getInstance();
 
-    
+
 public:
     //アイコンのファイルすべて
     std::vector<std::string> _comicIds{\

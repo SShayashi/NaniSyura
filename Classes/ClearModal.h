@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include "cocos2d.h"
-#include "cocosGUI.h"
+#include "ui/cocosGUI.h"
 
 #include "CharaDetailModal.h"
 #include "ComicListModal.h"
@@ -19,18 +19,18 @@
 #include "SimpleAudioEngine.h"
 class ClearModal : public cocos2d::Layer
 {
-    
+
 public:
-    
+
     virtual bool init();
-    
+
     void menuCloseCallback(Ref* pSender);
     //音処理クラスのインスタンス作成
     CocosDenshion::SimpleAudioEngine* soundEngineSE = CocosDenshion::SimpleAudioEngine::getInstance();
 
-    
+
     void pushMenu01(Ref *pSender);
-    
+
     // create()を使えるようにしている。
     CREATE_FUNC(ClearModal);
 };

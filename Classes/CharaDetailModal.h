@@ -11,13 +11,13 @@
 
 #include <stdio.h>
 #include "cocos2d.h"
-#include "CocosGUI.h"
+#include "ui/CocosGUI.h"
 #include "SimpleAudioEngine.h"
 USING_NS_CC;
 
 class CharaDetailModal : public cocos2d::Layer
 {
-    
+
 public:
     const std::vector<std::string> charaImages = {
         "charadetail/detail_futsuo.png",
@@ -30,11 +30,11 @@ public:
     };
     void menuCloseCallback(Ref* pSender);
     virtual bool init();
-    
+
     CC_SYNTHESIZE_RETAIN(ui::PageView* , _pageView, PageView);
     //音処理クラスのインスタンス作成
     CocosDenshion::SimpleAudioEngine* soundEngineSE = CocosDenshion::SimpleAudioEngine::getInstance();
-    
+
     CREATE_FUNC(CharaDetailModal);
 };
 

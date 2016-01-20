@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include "cocos2d.h"
-#include "cocosGUI.h"
+#include "ui/cocosGUI.h"
 
 #include "CharaDetailModal.h"
 #include "ComicListModal.h"
@@ -20,16 +20,16 @@
 
 class LoseModal : public cocos2d::Layer
 {
-    
+
 public:
-    
+
     virtual bool init();
     //音処理クラスのインスタンス作成
     CocosDenshion::SimpleAudioEngine* soundEngineSE = CocosDenshion::SimpleAudioEngine::getInstance();
     void menuCloseCallback(Ref* pSender);
-    
+
     void pushMenu01(Ref *pSender);
-    
+
     // create()を使えるようにしている。
     CREATE_FUNC(LoseModal);
 };
