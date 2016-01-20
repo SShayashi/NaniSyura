@@ -145,12 +145,14 @@ bool GameScene::init()
     /* タイマーラベルの追加 */
     int second = static_cast<int>(_second);
     auto secondLabel = Label::createWithCharMap("time/numbers.png", 43, 52, '0');
-    secondLabel = Label::createWithSystemFont(StringUtils::toString(second), "arial", 16);
+    secondLabel->enableShadow();
+    secondLabel->setPosition(Vec2(winSize.width /2.0 , winSize.height -70));
+    
+//    secondLabel = Label::createWithSystemFont(StringUtils::toString(second), "arial", 16);
     this->setSecondLabel(secondLabel);
     
-    secondLabel->enableShadow(Color4B::BLACK,Size(0.5,0.5) , 3);
-    secondLabel->enableOutline(Color4B::BLACK,1.5);
-    secondLabel->setPosition(Vec2(winSize.width /2.0 , winSize.height -70));
+
+
     this->addChild(secondLabel);
     
     /* タイマーヘッダーの追加 */
