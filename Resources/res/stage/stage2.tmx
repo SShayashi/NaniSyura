@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="144" height="112" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="tile" tilewidth="32" tileheight="32" spacing="10" margin="10">
+  <image source="bg_road.png" width="100" height="100"/>
+ </tileset>
+ <tileset firstgid="5" name="syuraba" tilewidth="175" tileheight="175">
+  <image source="shurabaarea.png" width="175" height="175"/>
+  <tile id="0">
+   <properties>
+    <property name="category" value="16"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="6" name="object" tilewidth="774" tileheight="236">
+  <image source="build_2.png" width="774" height="236"/>
+  <tile id="0">
+   <properties>
+    <property name="category" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="7" name="top01" tilewidth="2260" tileheight="260">
+  <image source="build_long_1_1.png" width="2260" height="260"/>
+  <tile id="0">
+   <properties>
+    <property name="category" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="8" name="tile" tilewidth="64" tileheight="64">
+  <image source="bg_road.png" width="100" height="100"/>
+ </tileset>
+ <tileset firstgid="9" name="tile2" tilewidth="100" tileheight="100">
+  <image source="bg_road.png" width="100" height="100"/>
+ </tileset>
+ <tileset firstgid="10" name="top02" tilewidth="2400" tileheight="268">
+  <image source="build_long_1_2.png" width="2329" height="260"/>
+  <tile id="0">
+   <properties>
+    <property name="category" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile" width="144" height="112">
+  <data encoding="base64" compression="zlib">
+   eJztwzENAAAMBKFb37/hLpUBCaumqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/AMVJNx8=
+  </data>
+ </layer>
+ <layer name="Syuraba" width="144" height="112">
+  <data encoding="base64" compression="zlib">
+   eJztzjENAAAMA6A+8295Jpr0AQUkAAAAAAAAAAAAAAAAAAAAAEDLrQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQ8JUsAAY=
+  </data>
+ </layer>
+ <layer name="Object" width="144" height="112">
+  <properties>
+   <property name="category" value="1"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzt0DERAAAIAzE2/DtGBtBLFHxbBQD/9HbAUQm/JGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4bgAGzwAW
+  </data>
+ </layer>
+</map>
