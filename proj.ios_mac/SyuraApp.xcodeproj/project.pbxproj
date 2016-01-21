@@ -78,6 +78,10 @@
 		794EF66D1C4F745A0070FDEB /* Risa.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 794EF64D1C4F745A0070FDEB /* Risa.cpp */; };
 		794EF66F1C4F745A0070FDEB /* VirtualPad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 794EF6521C4F745A0070FDEB /* VirtualPad.cpp */; };
 		794EF6701C4F745A0070FDEB /* PauseModal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 794EF6541C4F745A0070FDEB /* PauseModal.cpp */; };
+		79F2541D1C514B3F008EE04B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F2541C1C514B3F008EE04B /* CoreTelephony.framework */; };
+		79F2541F1C514B4B008EE04B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F2541E1C514B4B008EE04B /* StoreKit.framework */; };
+		79F254251C514B96008EE04B /* GameFeatKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F254241C514B96008EE04B /* GameFeatKit.framework */; };
+		79F2542B1C514BE2008EE04B /* NativeBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 79F2542A1C514BE2008EE04B /* NativeBridge.mm */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		93584D4EAFDA54FCDEB29DA4 /* PluginGoogleAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275E43179C11FC906C1705B3 /* PluginGoogleAnalytics.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
@@ -221,6 +225,14 @@
 		794EF6531C4F745A0070FDEB /* VirtualPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualPad.h; sourceTree = "<group>"; };
 		794EF6541C4F745A0070FDEB /* PauseModal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PauseModal.cpp; sourceTree = "<group>"; };
 		794EF6551C4F745A0070FDEB /* PauseModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseModal.h; sourceTree = "<group>"; };
+		79F2541C1C514B3F008EE04B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		79F2541E1C514B4B008EE04B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		79F254201C514B62008EE04B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		79F254221C514B6D008EE04B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		79F254241C514B96008EE04B /* GameFeatKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GameFeatKit.framework; sourceTree = "<group>"; };
+		79F254271C514BD8008EE04B /* NativeBridge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NativeBridge.cpp; sourceTree = "<group>"; };
+		79F254281C514BD8008EE04B /* NativeBridge.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NativeBridge.hpp; sourceTree = "<group>"; };
+		79F2542A1C514BE2008EE04B /* NativeBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NativeBridge.mm; sourceTree = "<group>"; };
 		7A7C4B24A7DF4F5E5B90DB82 /* sdkbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = sdkbox.framework; sourceTree = SOURCE_ROOT; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		95D042C6A3B9BA4DAB16A44E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
@@ -242,6 +254,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F254251C514B96008EE04B /* GameFeatKit.framework in Frameworks */,
+				79F2541F1C514B4B008EE04B /* StoreKit.framework in Frameworks */,
+				79F2541D1C514B3F008EE04B /* CoreTelephony.framework in Frameworks */,
 				ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */,
 				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */,
@@ -336,6 +351,11 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79F254241C514B96008EE04B /* GameFeatKit.framework */,
+				79F254221C514B6D008EE04B /* Foundation.framework */,
+				79F254201C514B62008EE04B /* UIKit.framework */,
+				79F2541E1C514B4B008EE04B /* StoreKit.framework */,
+				79F2541C1C514B3F008EE04B /* CoreTelephony.framework */,
 				ED545A7D1B68A1FA00C3958E /* libiconv.dylib */,
 				ED545A7B1B68A1F400C3958E /* libiconv.dylib */,
 				8262943D1AAF051F00CB7CF7 /* Security.framework */,
@@ -368,8 +388,9 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
+				79F2542C1C5153A4008EE04B /* gamefeat */,
+				521A8EA819F11F5000D177D7 /* fonts */,
 				C4E749E38A74DC91352BA6B3 /* sdkbox_config.json */,
 			);
 			name = Resources;
@@ -395,6 +416,7 @@
 				794EF64C1C4F745A0070FDEB /* Player.h */,
 				794EF6521C4F745A0070FDEB /* VirtualPad.cpp */,
 				794EF6531C4F745A0070FDEB /* VirtualPad.h */,
+				79F254261C514BBA008EE04B /* GameFeat */,
 				794EF6741C4F76BD0070FDEB /* ModalLayer */,
 				794EF6721C4F74C20070FDEB /* EnemyClass */,
 				794EF6271C4F745A0070FDEB /* sqlite */,
@@ -494,6 +516,23 @@
 				790319F51C4FE3D1005D78FB /* TutorialModal.hpp */,
 			);
 			name = ModalLayer;
+			sourceTree = "<group>";
+		};
+		79F254261C514BBA008EE04B /* GameFeat */ = {
+			isa = PBXGroup;
+			children = (
+				79F254271C514BD8008EE04B /* NativeBridge.cpp */,
+				79F2542A1C514BE2008EE04B /* NativeBridge.mm */,
+				79F254281C514BD8008EE04B /* NativeBridge.hpp */,
+			);
+			name = GameFeat;
+			sourceTree = "<group>";
+		};
+		79F2542C1C5153A4008EE04B /* gamefeat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = gamefeat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -647,6 +686,7 @@
 				794EF6701C4F745A0070FDEB /* PauseModal.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				794EF6621C4F745A0070FDEB /* CustomFollow.cpp in Sources */,
+				79F2542B1C514BE2008EE04B /* NativeBridge.mm in Sources */,
 				794EF65D1C4F745A0070FDEB /* ClearModal.cpp in Sources */,
 				794EF66C1C4F745A0070FDEB /* Player.cpp in Sources */,
 				794EF66A1C4F745A0070FDEB /* Mobu.cpp in Sources */,
@@ -700,7 +740,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -743,7 +786,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;

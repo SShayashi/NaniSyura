@@ -25,7 +25,14 @@ protected:
 //    virtual ~TutorialModal();
     //音処理クラスのインスタンス作成
     CocosDenshion::SimpleAudioEngine* soundEngineSE = CocosDenshion::SimpleAudioEngine::getInstance();
+    void pushMenu(Ref* pSender);
+    void iconHide(Ref* pSender);
+    void iconShow(Ref* pSender);
     
+    enum {
+        tag_gamefeat = 1,
+        tag_next
+    };
     
 public:
    
