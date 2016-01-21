@@ -30,8 +30,10 @@ protected:
 public:
    
     virtual bool init();
-    //
-    void checkIconFlag(char* imageName,Vec2 position);    
+    
+    // タッチ関係のイベント
+//    bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
+    void onTouchesEnded(const std::vector<Touch*>& touches, Event *unused_event);
     CREATE_FUNC(TutorialModal);
 };
 

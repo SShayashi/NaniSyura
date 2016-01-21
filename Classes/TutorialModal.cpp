@@ -24,6 +24,7 @@ bool TutorialModal::init()
     Size winSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
+    
     //背景を暗くする画像の貼り付け
     auto backpaper = Sprite::create("backpaper.png");
     backpaper->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
@@ -41,17 +42,25 @@ bool TutorialModal::init()
     tutorial->setScale(1.5, 1.8);
     this -> addChild(tutorial);
 
+    //onTouchEndedだけを使うとバグが出たので、マルチタップにしている
+    auto listener = EventListenerTouchAllAtOnce::create();
+    listener->setEnabled(true);
+    listener->onTouchesEnded = CC_CALLBACK_2(TutorialModal::onTouchesEnded, this);
     
-    // モーダル処理
-    auto listener = EventListenerTouchOneByOne::create();
-    listener->setSwallowTouches(true);
-    listener->onTouchBegan = [this](Touch *oneTouch,Event*event)->bool{
-        soundEngineSE->playEffect(touch);
-        this->removeFromParentAndCleanup(true);
-        return true;
-    };
     auto dispatcher = Director::getInstance()->getEventDispatcher();
     dispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     
     return true;
+}
+
+/**
+ *タッチ開始
+ *@param touches
+ *@param event
+ */
+void TutorialModal::onTouchesEnded(const std::vector<Touch *> &touches, cocos2d::Event *unused_event){
+    soundEngineSE->playEffect(touch);
+    this->removeFromParentAndCleanup(true);
+
+    return;
 }
