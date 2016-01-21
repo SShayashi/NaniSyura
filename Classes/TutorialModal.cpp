@@ -9,7 +9,7 @@
 #include "TutorialModal.hpp"
 #include "GameScene.h"
 //#include "ui/CocosGUI.h"
-
+#include "NativeBridge.hpp"
 using namespace cocos2d;
 #define touch "sounds/SE/touch.wav"
 

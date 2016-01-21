@@ -105,6 +105,9 @@ static AppDelegate s_sharedApplication;
      */
      //We don't need to call this method any more. It will interupt user defined game pause&resume logic
     /* cocos2d::Director::getInstance()->resume(); */
+    // GF Activate
+    [GFController activateGF:GF_SITE_ID useCustom:YES useIcon:YES];
+
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -112,6 +115,15 @@ static AppDelegate s_sharedApplication;
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
      */
+    UIDevice *device = [UIDevice currentDevice];
+    BOOL backgroundSupported = NO;
+    if ([device respondsToSelector:@selector(isMultitaskingSupported)]) {
+        backgroundSupported = device.multitaskingSupported;
+    }
+    if (backgroundSupported) {
+        [GFController backgroundTask];
+    }
+    
     cocos2d::Application::getInstance()->applicationDidEnterBackground();
 }
 
@@ -143,6 +155,64 @@ static AppDelegate s_sharedApplication;
 - (void)dealloc {
     [window release];
     [super dealloc];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    // アイコン広告の表示
+    [self.gfIconController loadAd:GF_SITE_ID];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    // アイコン広告の自動更新を停止
+    [self.gfIconController stopAd];
+}
+
+/**
+ * アイコン型GameFeat追加
+ */
+- (void)addIconGameFeat {
+    
+    // GFIconControllerの初期化
+    self.gfIconController = [[GFIconController alloc] init];
+    
+    // アイコンの自動更新間隔を指定
+    [self.gfIconController setRefreshTiming:10];
+    
+    // アイコンの配置位置を設定
+    {
+        GFIconView *iconView = [[[GFIconView alloc] initWithFrame:CGRectMake(10, 10, 60, 60)] autorelease];
+        [self.gfIconController addIconView:iconView];
+        [_viewController.view addSubview:iconView];
+    }
+    {
+        GFIconView *iconView = [[[GFIconView alloc] initWithFrame:CGRectMake(80, 10, 60, 60)] autorelease];
+        [self.gfIconController addIconView:iconView];
+        [_viewController.view addSubview:iconView];
+    }
+    
+    [self.gfIconController loadAd:GF_SITE_ID];
+}
+
+/**
+ * アイコン型GameFeat表示
+ */
+- (void)showIconGameFeat {
+    if ([self.gfIconController.arrIconView count] == 0) {
+        [self addIconGameFeat];
+    } else if (self.gfIconController.isTimerActive == NO) {
+        [self.gfIconController loadAd:GF_SITE_ID];
+    }
+    [self.gfIconController visibleIconAd];
+}
+
+/**
+ * アイコン型GameFeat非表示
+ */
+- (void)hideIconGameFeat {
+    [self.gfIconController stopAd];
+    [self.gfIconController invisibleIconAd];
 }
 
 
