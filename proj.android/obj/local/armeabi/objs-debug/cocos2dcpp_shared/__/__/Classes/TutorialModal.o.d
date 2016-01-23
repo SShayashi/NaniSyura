@@ -467,7 +467,7 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/TutorialModal.o: \
  /Users/SShayashi/Documents/CocosProjects/SyuraApp/proj.android/../cocos2d/extensions/../extensions/Particle3D/CCParticleSystem3D.h \
  jni/../../Classes/UseSqlite.hpp \
  /Users/SShayashi/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/iostream \
- jni/../../Classes/sqlite/sqlite3.h
+ jni/../../Classes/sqlite/sqlite3.h jni/../../Classes/NativeBridge.hpp
 
 jni/../../Classes/TutorialModal.hpp:
 
@@ -1420,3 +1420,5 @@ jni/../../Classes/UseSqlite.hpp:
 /Users/SShayashi/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/iostream:
 
 jni/../../Classes/sqlite/sqlite3.h:
+
+jni/../../Classes/NativeBridge.hpp:

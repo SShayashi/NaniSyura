@@ -15,8 +15,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" /><meta-data android:name="com.google.android.gms.analytics.globalConfigResource" android:resource="@xml/global_tracker" /><receiver android:enabled="true" android:name="com.google.android.gms.analytics.AnalyticsReceiver"><intent-filter><action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" /></intent-filter><intent-filter><action android:name="com.android.vending.INSTALL_REFERRER" /></intent-filter></receiver><service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService" /><receiver android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"><intent-filter><action android:name="com.android.vending.INSTALL_REFERRER" /></intent-filter></receiver><service android:name="com.google.android.gms.analytics.CampaignTrackingService" /></application>
+
+        <!-- GameFeat START -->
+        <meta-data android:name="gamefeat_site_id" android:value="10509" />
+        <activity
+            android:name="jp.basicinc.gamefeat.android.sdk.view.GameFeatAppActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="GameFeat" >
+        </activity>
+        <activity
+            android:name="jp.basicinc.gamefeat.android.sdk.view.GameFeatAppChildActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="GameFeat"
+            android:screenOrientation="sensor" >
+        </activity>
+        <receiver
+            android:name="jp.basicinc.gamefeat.android.sdk.receiver.GameFeatBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <!-- GameFeat END -->
+
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" /><meta-data android:name="com.google.android.gms.analytics.globalConfigResource" android:resource="@xml/global_tracker" /><receiver android:enabled="true" android:name="com.google.android.gms.analytics.AnalyticsReceiver"><intent-filter><action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" /></intent-filter><intent-filter><action android:name="com.android.vending.INSTALL_REFERRER" /></intent-filter></receiver><service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService" /><receiver android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"><intent-filter><action android:name="com.android.vending.INSTALL_REFERRER" /></intent-filter></receiver><service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+
+    </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
-    
+
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /><uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /><uses-permission android:name="android.permission.WAKE_LOCK" /></manifest>

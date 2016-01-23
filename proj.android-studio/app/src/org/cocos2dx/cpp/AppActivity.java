@@ -23,7 +23,47 @@ THE SOFTWARE.
 ****************************************************************************/
 package org.cocos2dx.cpp;
 
+import jp.basicinc.gamefeat.android.sdk.controller.GameFeatAppController;
 import org.cocos2dx.lib.Cocos2dxActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.LinearLayout;
 
 public class AppActivity extends Cocos2dxActivity {
+    private static LinearLayout container;
+    private static AppActivity me = null;
+    static GameFeatAppController gfAppController;
+
+    /////////////////////////////////
+    // GAMEFEAT ICON
+    /////////////////////////////////
+
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        me = this;
+        container = new LinearLayout(me);
+        me.addContentView(container, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+
+        gfAppController = new GameFeatAppController();
+        // 広告設定初期化
+        gfAppController.activateGF(me, true, true, true);
+    }
+
+    public void onStart() {
+        super.onStart();
+    }
+
+    //================================================================================
+    // GAMEFEAT オファーウォール表示・非表示
+    //================================================================================
+    public static void showGameFeatJNI()
+    {
+        gfAppController.show(me);
+    }
+
 }
+
+
+

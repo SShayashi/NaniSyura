@@ -668,6 +668,12 @@
 /Users/SShayashi/Documents/CocosProjects/SyuraApp/proj.android/bin/res/drawable-hdpi/icon.png \
 /Users/SShayashi/Documents/CocosProjects/SyuraApp/proj.android/bin/res/drawable-ldpi/icon.png \
 /Users/SShayashi/Documents/CocosProjects/SyuraApp/proj.android/bin/res/drawable-mdpi/icon.png \
+/Users/SShayashi/Documents/CocosProjects/SyuraApp/proj.android/assets/backButton1.png \
+/Users/SShayashi/Documents/CocosProjects/SyuraApp/proj.android/assets/backButton2.png \
+/Users/SShayashi/Documents/CocosProjects/SyuraApp/proj.android/assets/bGameFeat1.png \
+/Users/SShayashi/Documents/CocosProjects/SyuraApp/proj.android/assets/bGameFeat2.png \
+/Users/SShayashi/Documents/CocosProjects/SyuraApp/proj.android/assets/btIconHide.png \
+/Users/SShayashi/Documents/CocosProjects/SyuraApp/proj.android/assets/btIconShow.png \
 /Users/SShayashi/Documents/CocosProjects/SyuraApp/proj.android/assets/fonts \
 /Users/SShayashi/Documents/CocosProjects/SyuraApp/proj.android/assets/res \
 /Users/SShayashi/Documents/CocosProjects/SyuraApp/proj.android/assets/sdkbox_config.json \
