@@ -3,6 +3,7 @@
 #include "UseSqlite.hpp"
 #include "TutorialModal.hpp"
 #include "PluginGoogleAnalytics/PluginGoogleAnalytics.h"
+#include "PluginChartboost/PluginChartboost.h"
 
 USING_NS_CC;
 
@@ -26,6 +27,8 @@ void AppDelegate::initGLContextAttrs()
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
+    
+    sdkbox::PluginChartboost::init();
     
     sdkbox::PluginGoogleAnalytics::init();
     sdkbox::PluginGoogleAnalytics::startSession();
