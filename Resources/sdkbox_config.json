@@ -15,8 +15,8 @@
                     "type": "more_app"
                 }
             }, 
-            "id": "4f7b433509b6025804000002", 
-            "signature": "dd2d41b69ac01b80f443f5b6cf06096d457f82bd"
+            "id": "56a45972f7898250468d3c3a",
+            "signature": "e2b5dc3f7c489232739933b7ae4d06121061aab3"
         }
     }, 
     "ios": {
@@ -35,8 +35,8 @@
                     "type": "more_app"
                 }
             }, 
-            "id": "4f21c409cd1cb2fb7000001b", 
-            "signature": "92e2de2fd7070327bdeb54c15a5295309c6fcd2d"
+            "id": "56a45972f7898250468d3c38",
+            "signature": "e035798a59f96aefd142010b84f9ce996fb68dd3"
         }
     }
 }
