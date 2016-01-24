@@ -7,8 +7,9 @@
 //
 
 #include "TopModal.h"
+#include "Helper.hpp"
 #include "PluginGoogleAnalytics/PluginGoogleAnalytics.h"
-
+#include "PluginChartboost/PluginChartboost.h"
 //#include "ui/CocosGUI.h"
 
 USING_NS_CC;
@@ -40,11 +41,15 @@ bool TopModal::init()
         
         //touch
         if (type == ui::Widget::TouchEventType::ENDED) {
-            soundEngineSE->playEffect(touch);
+
             //好きな処理
+            CCLOG("女の子リストボタンが押されました");
+            
+            soundEngineSE->playEffect(touch);
+            
             sdkbox::PluginGoogleAnalytics::logEvent("UI", "Button", "Girls list button", 1);
             sdkbox::PluginGoogleAnalytics::dispatchHits();
-            CCLOG("女の子リストボタンが押されました");
+            
             auto layer = CharaDetailModal::create();
             layer->setName("CharaDetail");
             this->addChild(layer);
@@ -57,12 +62,12 @@ bool TopModal::init()
         
         //touch
         if (type == ui::Widget::TouchEventType::ENDED) {
+            //好きな処理
+            CCLOG("漫画見るリストが押されました");
             soundEngineSE->playEffect(touch);
             sdkbox::PluginGoogleAnalytics::logEvent("UI", "Button", "Comic list button", 2);
             sdkbox::PluginGoogleAnalytics::dispatchHits();
-
-            //好きな処理
-            CCLOG("漫画見るリストが押されました");
+            
             auto layer = ComicListModal::create();
             layer->setName("ComicList");
             this->addChild(layer);
