@@ -79,6 +79,8 @@
 		794EF66F1C4F745A0070FDEB /* VirtualPad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 794EF6521C4F745A0070FDEB /* VirtualPad.cpp */; };
 		794EF6701C4F745A0070FDEB /* PauseModal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 794EF6541C4F745A0070FDEB /* PauseModal.cpp */; };
 		79799FBF1C54991D00D1D7B4 /* Helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79799FBD1C54991D00D1D7B4 /* Helper.cpp */; };
+		79799FC41C5522B400D1D7B4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 79799FC21C5522B400D1D7B4 /* Icon.png */; };
+		79799FC51C5522B400D1D7B4 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79799FC31C5522B400D1D7B4 /* Icon@2x.png */; };
 		79F2541D1C514B3F008EE04B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F2541C1C514B3F008EE04B /* CoreTelephony.framework */; };
 		79F2541F1C514B4B008EE04B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F2541E1C514B4B008EE04B /* StoreKit.framework */; };
 		79F254251C514B96008EE04B /* GameFeatKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F254241C514B96008EE04B /* GameFeatKit.framework */; };
@@ -230,6 +232,8 @@
 		794EF6551C4F745A0070FDEB /* PauseModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseModal.h; sourceTree = "<group>"; };
 		79799FBD1C54991D00D1D7B4 /* Helper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Helper.cpp; sourceTree = "<group>"; };
 		79799FBE1C54991D00D1D7B4 /* Helper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Helper.hpp; sourceTree = "<group>"; };
+		79799FC21C5522B400D1D7B4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		79799FC31C5522B400D1D7B4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		79F2541C1C514B3F008EE04B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
 		79F2541E1C514B4B008EE04B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		79F254201C514B62008EE04B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -479,6 +483,8 @@
 				5087E77917EB970100C73F5D /* Icon-57.png */,
 				5087E77A17EB970100C73F5D /* Icon-72.png */,
 				5087E77B17EB970100C73F5D /* Icon-76.png */,
+				79799FC21C5522B400D1D7B4 /* Icon.png */,
+				79799FC31C5522B400D1D7B4 /* Icon@2x.png */,
 				5087E77C17EB970100C73F5D /* Info.plist */,
 			);
 			name = Icons;
@@ -649,6 +655,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
+				79799FC51C5522B400D1D7B4 /* Icon@2x.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
@@ -657,6 +664,7 @@
 				794EF65A1C4F745A0070FDEB /* sqlite in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
+				79799FC41C5522B400D1D7B4 /* Icon.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
