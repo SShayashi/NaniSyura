@@ -11,6 +11,8 @@
 #include "GameScene.h"
 //#include "ui/CocosGUI.h"
 #include "PluginGoogleAnalytics/PluginGoogleAnalytics.h"
+#include "Helper.hpp"
+#include "NativeBridge.hpp"
 
 using namespace cocos2d;
 #define touch "sounds/SE/touch.wav"
@@ -74,10 +76,14 @@ bool ClearModal::init()
         //touch
         if (type == ui::Widget::TouchEventType::ENDED) {
             CCLOG("リトライボタンが押されました");
+            soundEngineSE->playEffect(touch);
             sdkbox::PluginGoogleAnalytics::logEvent("UI", "Button", "Retry button", 0);
             sdkbox::PluginGoogleAnalytics::dispatchHits();
 
-            soundEngineSE->playEffect(touch);
+            //広告を表示させる
+            if(Helper::getInstance()->isGameFeadOpen())
+                NativeBridge::showGameFeat();
+            
             // 遷移先の画面のインスタンス
             Scene *pScene = GameScene::createScene();
             // 0.5秒かけてフェードアウトしながら次の画面に遷移します

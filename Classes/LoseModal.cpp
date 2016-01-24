@@ -10,6 +10,9 @@
 #include "cocostudio/CocoStudio.h"
 #include "GameScene.h"
 #include "PluginGoogleAnalytics/PluginGoogleAnalytics.h"
+#include "Helper.hpp"
+#include "NativeBridge.hpp"
+
 //#include "ui/CocosGUI.h"
 
 using namespace cocos2d;
@@ -73,10 +76,14 @@ bool LoseModal::init()
         
         //touch
         if (type == ui::Widget::TouchEventType::ENDED) {
+            CCLOG("リトライボタンが押されました");
+            soundEngineSE->playEffect(touch);
+
             sdkbox::PluginGoogleAnalytics::logEvent("UI", "Button", "Retyr button", 0);
             sdkbox::PluginGoogleAnalytics::dispatchHits();
-            soundEngineSE->playEffect(touch);
-            CCLOG("リトライボタンが押されました");
+            if(Helper::getInstance()->isGameFeadOpen())
+                NativeBridge::showGameFeat();
+
             
             // 遷移先の画面のインスタンス
                 Scene *pScene = GameScene::createScene();

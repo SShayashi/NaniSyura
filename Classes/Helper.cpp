@@ -8,8 +8,8 @@
 
 #include "Helper.hpp"
 USING_NS_CC;
-#define GameFeadOpneNum 3
-#define ChartBoostOpenNum 3
+#define GameFeadOpneNum 2
+#define ChartBoostOpenNum 2
 
 Helper* Helper::mHelper = NULL;
 
