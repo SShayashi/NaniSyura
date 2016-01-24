@@ -8,7 +8,10 @@
 
 #include "ComicListModal.h"
 #include "cocostudio/CocoStudio.h"
+#include "Helper.hpp"
 #include "PluginGoogleAnalytics/PluginGoogleAnalytics.h"
+#include "PluginChartboost/PluginChartboost.h"
+
 #define touch "sounds/SE/touch.wav"
 //横方向に配置されるコミックアイコンの数
 const int HORIZONTAL_COUNT = 3;
@@ -75,6 +78,10 @@ bool ComicListModal::init()
             sdkbox::PluginGoogleAnalytics::logEvent("UI", "Button", "Close button", 3);
             sdkbox::PluginGoogleAnalytics::dispatchHits();
 
+            //広告を表示させる
+            if(Helper::getInstance()->isChartBoostOpen())
+                sdkbox::PluginChartboost::show(sdkbox::CB_Location_Default);
+            
             soundEngineSE->playEffect(touch);
             this->removeFromParentAndCleanup(true);
         }

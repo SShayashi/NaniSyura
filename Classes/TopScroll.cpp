@@ -9,6 +9,8 @@
 #include "TopScroll.h"
 // ScrollView インクルード
 #include "extensions/cocos-ext.h"
+#include "Helper.hpp"
+#include "PluginChartboost/PluginChartboost.h"
 #define touch "sounds/SE/touch.wav"
 USING_NS_CC;     // cocos2d
 USING_NS_CC_EXT; // cocos2d::extension
@@ -135,6 +137,10 @@ ui::Button* TopScroll::makeUiButton(ui::Button *button){
         if (type == cocos2d::ui::Widget::TouchEventType::ENDED)         {
             // 処理
             soundEngineSE->playEffect(touch);
+            //広告を表示させる
+            if(Helper::getInstance()->isChartBoostOpen())
+                sdkbox::PluginChartboost::show(sdkbox::CB_Location_Default);
+
             this->removeFromParentAndCleanup(true);
         }
     });

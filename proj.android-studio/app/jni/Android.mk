@@ -12,7 +12,8 @@ LOCAL_MODULE := cocos2dcpp_shared
 LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 FILE_LIST := $(wildcard $(LOCAL_PATH)/../../../Classes/*.cpp)
-LOCAL_SRC_FILES := hellocpp/main.cpp../../../Classes/sqlite/sqlite3.c
+LOCAL_SRC_FILES := hellocpp/main.cpp\
+  ../../../Classes/sqlite/sqlite3.c
 LOCAL_SRC_FILES += $(FILE_LIST:$(LOCAL_PATH)/%=%)
 
 

@@ -8,7 +8,9 @@
 //
 
 #include "CharaDetailModal.h"
+#include "Helper.hpp"
 #include "PluginGoogleAnalytics/PluginGoogleAnalytics.h"
+#include "PluginChartboost/PluginChartboost.h"
 #define touch "sounds/SE/touch.wav"
 // on "init" you need to initialize your instance
 bool CharaDetailModal::init()
@@ -73,7 +75,10 @@ bool CharaDetailModal::init()
             if (type == cocos2d::ui::Widget::TouchEventType::ENDED)         {
                 sdkbox::PluginGoogleAnalytics::logEvent("UI", "Button", "Close button", 3);
                 sdkbox::PluginGoogleAnalytics::dispatchHits();
-
+                
+                //広告を表示させる
+                if(Helper::getInstance()->isChartBoostOpen())
+                    sdkbox::PluginChartboost::show(sdkbox::CB_Location_Default);
                 // 処理
                 soundEngineSE->playEffect(touch);
                 this->removeFromParentAndCleanup(true);

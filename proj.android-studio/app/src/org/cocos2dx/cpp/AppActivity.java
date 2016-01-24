@@ -30,6 +30,8 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.content.Intent;
+import com.sdkbox.plugin.SDKBox;
 
 public class AppActivity extends Cocos2dxActivity {
     private static LinearLayout container;
@@ -49,11 +51,49 @@ public class AppActivity extends Cocos2dxActivity {
         gfAppController = new GameFeatAppController();
         // 広告設定初期化
         gfAppController.activateGF(me, true, true, true);
+
+        /* Chartboost  */
+        onLoadNativeLibraries();
+        SDKBox.init(this);
     }
 
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(!SDKBox.onActivityResult(requestCode, resultCode, data)) {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
+
+    @Override
     public void onStart() {
         super.onStart();
+        SDKBox.onStart();
     }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        SDKBox.onStop();
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SDKBox.onResume();
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        SDKBox.onPause();
+    }
+    @Override
+    public void onBackPressed() {
+        if(!SDKBox.onBackPressed()) {
+            super.onBackPressed();
+        }
+    }
+
+
+
 
     //================================================================================
     // GAMEFEAT オファーウォール表示・非表示
@@ -62,6 +102,8 @@ public class AppActivity extends Cocos2dxActivity {
     {
         gfAppController.show(me);
     }
+
+
 
 }
 
