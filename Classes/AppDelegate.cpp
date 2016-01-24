@@ -2,6 +2,7 @@
 #include "GameScene.h"
 #include "UseSqlite.hpp"
 #include "TutorialModal.hpp"
+#include "Helper.hpp"
 #include "PluginGoogleAnalytics/PluginGoogleAnalytics.h"
 #include "PluginChartboost/PluginChartboost.h"
 
@@ -51,6 +52,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     FileUtils::getInstance()->addSearchPath("res");
 
+    //ヘルパークラスを初期化
+    Helper::getInstance()->getInstance();
     // create a scene. it's an autorelease object
     auto scene = GameScene::createScene();
     auto tutorial = TutorialModal::create();
