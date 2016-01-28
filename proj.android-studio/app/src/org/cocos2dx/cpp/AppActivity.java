@@ -32,6 +32,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.content.Intent;
 import com.sdkbox.plugin.SDKBox;
+import android.content.Intent;
+import com.sdkbox.plugin.SDKBox;
 
 public class AppActivity extends Cocos2dxActivity {
     private static LinearLayout container;

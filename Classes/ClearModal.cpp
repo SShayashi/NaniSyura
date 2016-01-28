@@ -81,8 +81,8 @@ bool ClearModal::init()
             sdkbox::PluginGoogleAnalytics::dispatchHits();
 
             //広告を表示させる
-            if(Helper::getInstance()->isGameFeadOpen())
-                NativeBridge::showGameFeat();
+//            if(Helper::getInstance()->isGameFeadOpen())
+//                NativeBridge::showGameFeat();
             
             // 遷移先の画面のインスタンス
             Scene *pScene = GameScene::createScene();

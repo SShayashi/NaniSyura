@@ -81,8 +81,8 @@ bool LoseModal::init()
 
             sdkbox::PluginGoogleAnalytics::logEvent("UI", "Button", "Retyr button", 0);
             sdkbox::PluginGoogleAnalytics::dispatchHits();
-            if(Helper::getInstance()->isGameFeadOpen())
-                NativeBridge::showGameFeat();
+//            if(Helper::getInstance()->isGameFeadOpen())
+//                NativeBridge::showGameFeat();
 
             
             // 遷移先の画面のインスタンス
