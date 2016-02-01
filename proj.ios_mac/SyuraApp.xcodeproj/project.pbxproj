@@ -85,6 +85,10 @@
 		79F2541F1C514B4B008EE04B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F2541E1C514B4B008EE04B /* StoreKit.framework */; };
 		79F254251C514B96008EE04B /* GameFeatKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F254241C514B96008EE04B /* GameFeatKit.framework */; };
 		79F2542B1C514BE2008EE04B /* NativeBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 79F2542A1C514BE2008EE04B /* NativeBridge.mm */; };
+		79F4A2581C5EFB94003EDC42 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F4A2561C5EFB94003EDC42 /* EventKit.framework */; };
+		79F4A2591C5EFB94003EDC42 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F4A2571C5EFB94003EDC42 /* EventKitUI.framework */; };
+		79F4A25B1C5EFBA2003EDC42 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F4A25A1C5EFBA2003EDC42 /* MessageUI.framework */; };
+		79F4A25D1C5EFC10003EDC42 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F4A25C1C5EFC10003EDC42 /* GoogleMobileAds.framework */; };
 		7E1D4855A6F51701B365039F /* PluginChartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62741B787047A56731115EF /* PluginChartboost.framework */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		93584D4EAFDA54FCDEB29DA4 /* PluginGoogleAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275E43179C11FC906C1705B3 /* PluginGoogleAnalytics.framework */; };
@@ -242,6 +246,10 @@
 		79F254271C514BD8008EE04B /* NativeBridge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NativeBridge.cpp; sourceTree = "<group>"; };
 		79F254281C514BD8008EE04B /* NativeBridge.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NativeBridge.hpp; sourceTree = "<group>"; };
 		79F2542A1C514BE2008EE04B /* NativeBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NativeBridge.mm; sourceTree = "<group>"; };
+		79F4A2561C5EFB94003EDC42 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/EventKit.framework; sourceTree = DEVELOPER_DIR; };
+		79F4A2571C5EFB94003EDC42 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/EventKitUI.framework; sourceTree = DEVELOPER_DIR; };
+		79F4A25A1C5EFBA2003EDC42 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		79F4A25C1C5EFC10003EDC42 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../GoogleMobileAdsSdkiOS-7.6.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		7A7C4B24A7DF4F5E5B90DB82 /* sdkbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = sdkbox.framework; sourceTree = SOURCE_ROOT; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		95D042C6A3B9BA4DAB16A44E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
@@ -265,6 +273,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F4A25D1C5EFC10003EDC42 /* GoogleMobileAds.framework in Frameworks */,
+				79F4A25B1C5EFBA2003EDC42 /* MessageUI.framework in Frameworks */,
+				79F4A2581C5EFB94003EDC42 /* EventKit.framework in Frameworks */,
+				79F4A2591C5EFB94003EDC42 /* EventKitUI.framework in Frameworks */,
 				79F254251C514B96008EE04B /* GameFeatKit.framework in Frameworks */,
 				79F2541F1C514B4B008EE04B /* StoreKit.framework in Frameworks */,
 				79F2541D1C514B3F008EE04B /* CoreTelephony.framework in Frameworks */,
@@ -364,6 +376,10 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79F4A25C1C5EFC10003EDC42 /* GoogleMobileAds.framework */,
+				79F4A25A1C5EFBA2003EDC42 /* MessageUI.framework */,
+				79F4A2561C5EFB94003EDC42 /* EventKit.framework */,
+				79F4A2571C5EFB94003EDC42 /* EventKitUI.framework */,
 				79F254241C514B96008EE04B /* GameFeatKit.framework */,
 				79F254221C514B6D008EE04B /* Foundation.framework */,
 				79F254201C514B62008EE04B /* UIKit.framework */,
