@@ -86,6 +86,29 @@ static AppDelegate s_sharedApplication;
 
     app->run();
 
+    bannerView_ = [[GADBannerView alloc]initWithAdSize:kGADAdSizeSmartBannerPortrait];
+    
+    bannerView_.adUnitID = @"ca-app-pub-6270222345703223/2746053598"; // 広告ユニットID
+    bannerView_.rootViewController = self.viewController;
+    [self.viewController.view addSubview:bannerView_];
+    
+    // 一番下に広告を表示
+    bannerView_.center = CGPointMake(
+                                     self.viewController.view.center.x,
+                                     self.viewController.view.frame.size.height-bannerView_.frame.size.height/2
+                                     );
+    
+    GADRequest *request = [GADRequest request];
+    
+    // テストデバイス登録
+    request.testDevices = [NSArray arrayWithObjects:
+                           kGADSimulatorID, // エミュレータ
+                           @"8981300022608856435",
+                           nil];
+    
+    [bannerView_ loadRequest:request];
+    
+    
     return YES;
 }
 

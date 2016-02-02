@@ -55,6 +55,7 @@
 		6ACA4EDF80795D20E05D2A24 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 73AA49279B925CF149E1FF03 /* libsqlite3.dylib */; };
 		770943EC863B46B4B3A58C59 /* sdkbox_config.json in Resources */ = {isa = PBXBuildFile; fileRef = C4E749E38A74DC91352BA6B3 /* sdkbox_config.json */; };
 		790319F61C4FE3D1005D78FB /* TutorialModal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 790319F41C4FE3D1005D78FB /* TutorialModal.cpp */; };
+		7905E2971C5F935E00DED2F0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7905E2961C5F935E00DED2F0 /* CoreMedia.framework */; };
 		794EF6581C4F745A0070FDEB /* ComicListModal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 794EF6251C4F745A0070FDEB /* ComicListModal.cpp */; };
 		794EF6591C4F745A0070FDEB /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 794EF6261C4F745A0070FDEB /* GameScene.cpp */; };
 		794EF65A1C4F745A0070FDEB /* sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 794EF6271C4F745A0070FDEB /* sqlite */; };
@@ -189,6 +190,7 @@
 		73AA49279B925CF149E1FF03 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
 		790319F41C4FE3D1005D78FB /* TutorialModal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TutorialModal.cpp; sourceTree = "<group>"; };
 		790319F51C4FE3D1005D78FB /* TutorialModal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TutorialModal.hpp; sourceTree = "<group>"; };
+		7905E2961C5F935E00DED2F0 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
 		794EF6251C4F745A0070FDEB /* ComicListModal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ComicListModal.cpp; sourceTree = "<group>"; };
 		794EF6261C4F745A0070FDEB /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
 		794EF6271C4F745A0070FDEB /* sqlite */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sqlite; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7905E2971C5F935E00DED2F0 /* CoreMedia.framework in Frameworks */,
 				79F4A25D1C5EFC10003EDC42 /* GoogleMobileAds.framework in Frameworks */,
 				79F4A25B1C5EFBA2003EDC42 /* MessageUI.framework in Frameworks */,
 				79F4A2581C5EFB94003EDC42 /* EventKit.framework in Frameworks */,
@@ -376,6 +379,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7905E2961C5F935E00DED2F0 /* CoreMedia.framework */,
 				79F4A25C1C5EFC10003EDC42 /* GoogleMobileAds.framework */,
 				79F4A25A1C5EFBA2003EDC42 /* MessageUI.framework */,
 				79F4A2561C5EFB94003EDC42 /* EventKit.framework */,
@@ -800,7 +804,7 @@
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"\"sdkbox.framework\"",
 					"\"PluginGoogleAnalytics.framework\"",
@@ -811,6 +815,7 @@
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
+					"-objc",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mounakisou.syuraapp;
 				SDKROOT = iphoneos;
@@ -847,7 +852,7 @@
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"\"sdkbox.framework\"",
 					"\"PluginGoogleAnalytics.framework\"",
@@ -858,6 +863,7 @@
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
+					"-objc",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mounakisou.syuraapp;
 				SDKROOT = iphoneos;
