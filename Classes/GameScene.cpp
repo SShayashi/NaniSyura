@@ -290,7 +290,7 @@ bool GameScene::onContactBegin(PhysicsContact& contact){
     /* 衝突した剛体が双方ともMob敵の場合 */
     if(categoryA & static_cast<int>(Stage::TileType::MOB_ENEMY)  && categoryB & static_cast<int>(Stage::TileType::MOB_ENEMY)){
         //        CCLOG("Mob敵とMob敵がぶつかりました");
-        
+        this->contactEvenEnemy(bodyA, bodyB);
         return true;
     }
     
@@ -318,6 +318,7 @@ bool GameScene::onContactBegin(PhysicsContact& contact){
         /* 神５に接触した場合 */
         if(categoryB & static_cast<int>(Stage::TileType::SYURA_ENEMY)){
             //            CCLOG("敵「神5なう」");
+            this->contactSyuraAndMob(bodyB, bodyA);
             return true;
         }
         
@@ -342,6 +343,7 @@ bool GameScene::onContactBegin(PhysicsContact& contact){
         /* 神５に接触した場合 */
         if(categoryA & static_cast<int>(Stage::TileType::SYURA_ENEMY)){
             //            CCLOG("敵「神5なう」");
+            this->contactSyuraAndMob(bodyA, bodyB);
             return true;
         }
         
@@ -350,6 +352,7 @@ bool GameScene::onContactBegin(PhysicsContact& contact){
     /* 衝突した剛体が双方とも修羅キャラの場合 */
     if(categoryA & static_cast<int>(Stage::TileType::SYURA_ENEMY)  && categoryB & static_cast<int>(Stage::TileType::SYURA_ENEMY)){
         //        CCLOG("修羅キャラと修羅キャラががぶつかりました");
+        this->contactEvenEnemy(bodyA, bodyB);
         return true;
     }
     
@@ -374,6 +377,7 @@ bool GameScene::onContactBegin(PhysicsContact& contact){
         /* Mob敵に接触した場合 */
         if(categoryB & static_cast<int>(Stage::TileType::MOB_ENEMY)){
             CCLOG("神５「モブ敵とぶつかりました」");
+            this->contactSyuraAndMob(bodyA, bodyB);
             return true;
         }
         
@@ -396,8 +400,9 @@ bool GameScene::onContactBegin(PhysicsContact& contact){
             return true;
         }
         /* 神５に接触した場合 */
-        if(categoryA & static_cast<int>(Stage::TileType::SYURA_ENEMY)){
+        if(categoryA & static_cast<int>(Stage::TileType::MOB_ENEMY)){
             CCLOG("敵「神5なう」");
+            this->contactSyuraAndMob(bodyB, bodyA);
             return true;
         }
         
@@ -425,7 +430,7 @@ bool GameScene::onContactBegin(PhysicsContact& contact){
 }
 
 //同等のキャラがぶつかればお互いに弾かれる
-void contactEvenEnemy(PhysicsBody *bodyA , PhysicsBody *bodyB){
+void GameScene::contactEvenEnemy(PhysicsBody *bodyA , PhysicsBody *bodyB){
     
     auto nowposa = bodyA->getPosition();
     auto nowposb = bodyB->getPosition();
@@ -447,7 +452,7 @@ void contactEvenEnemy(PhysicsBody *bodyA , PhysicsBody *bodyB){
 }
 
 //修羅キャラとMobがぶつかった時の処理、Mobだけ弾き飛ばされる
-void contactSyuraAndMob(PhysicsBody *Syura , PhysicsBody *Mob){
+void GameScene::contactSyuraAndMob(PhysicsBody *Syura , PhysicsBody *Mob){
     auto nowposa = Syura->getPosition();
     auto nowposb = Mob->getPosition();
     
