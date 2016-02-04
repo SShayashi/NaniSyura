@@ -88,7 +88,7 @@ static AppDelegate s_sharedApplication;
 
     bannerView_ = [[GADBannerView alloc]initWithAdSize:kGADAdSizeSmartBannerPortrait];
     
-    bannerView_.adUnitID = @"ca-app-pub-6270222345703223/2746053598"; // 広告ユニットID
+    bannerView_.adUnitID = @"ca-app-pub-6270222345703223/8178321594"; // 広告ユニットID
     bannerView_.rootViewController = self.viewController;
     [self.viewController.view addSubview:bannerView_];
     
