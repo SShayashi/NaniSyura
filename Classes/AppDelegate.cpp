@@ -1,7 +1,6 @@
 #include "AppDelegate.h"
 #include "GameScene.h"
 #include "UseSqlite.hpp"
-#include "TutorialModal.hpp"
 #include "Helper.hpp"
 #include "PluginGoogleAnalytics/PluginGoogleAnalytics.h"
 #include "PluginChartboost/PluginChartboost.h"
@@ -50,8 +49,6 @@ bool AppDelegate::applicationDidFinishLaunching() {
     Helper::getInstance()->getInstance();
     // create a scene. it's an autorelease object
     auto scene = GameScene::createScene();
-    auto tutorial = TutorialModal::create();
-    scene->addChild(tutorial);
 //    auto scene = UseSqlite::createScene();
     // run
     director->runWithScene(scene);

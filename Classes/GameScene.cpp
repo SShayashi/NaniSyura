@@ -12,6 +12,8 @@
 #include "TopModal.h"
 #include "LoseModal.h"
 #include "ClearModal.h"
+#include "TutorialModal.hpp"
+#include "Helper.hpp"
 #include "Haruka.h"
 #include "Nene.h"
 #include "Kokona.h"
@@ -124,6 +126,13 @@ bool GameScene::init()
     layer->setName("TOPMODAL");
     this->addChild(layer);
     
+    /* 起動時のみチュートリアル画面を表示 */
+    if(!Helper::getInstance()->getTutorialOpend()){
+        auto tutorial = TutorialModal::create();
+        tutorial->setName("TUTORIAL");
+        this->addChild(tutorial);
+        Helper::getInstance()->setTutorialOpend(true);
+    }
     
     /* マルチタップリスナーの設置 */
     auto listener = EventListenerTouchAllAtOnce::create();

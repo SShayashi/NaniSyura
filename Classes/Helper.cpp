@@ -34,6 +34,7 @@ void Helper::initialize()
 {
     _gameFeadCount=0;
     _chartBoostCount=0;
+    _tutorialOpend=false;
     
 }
 

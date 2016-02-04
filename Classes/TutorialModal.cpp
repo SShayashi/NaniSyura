@@ -39,14 +39,36 @@ bool TutorialModal::init()
     auto tutorial = Sprite::create("tutorial.png");
     tutorial->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
     tutorial->setPosition(winSize / 2);
-    tutorial->setScale(1.5, 1.8);
     this -> addChild(tutorial);
 
-    //onTouchEndedだけを使うとバグが出たので、マルチタップにしている
-    auto listener = EventListenerTouchAllAtOnce::create();
-    listener->setEnabled(true);
-    listener->onTouchesEnded = CC_CALLBACK_2(TutorialModal::onTouchesEnded, this);
+    /*ボタンの設置*/
+    //閉じるボタンの設定
+    auto button = ui::Button::create();
+    // タッチイベント True
+    button->setTouchEnabled(true);
+    // ボタンの中心位置　アーカーポンイント
+    button->setAnchorPoint( Vec2::ANCHOR_MIDDLE);
+    // 通常状態の画像 押下状態の画像
+    button->loadTextures("charadetail/charadetail_close.png","charadetail/charadetail_close_clicked.png", "");
+    // ボタンの配置
+    button->setPosition(winSize/2 + (tutorial->getContentSize() / 2 ));
+    // ボタンのイベント
+    button->addTouchEventListener([this](Ref* pSender, cocos2d::ui::Widget::TouchEventType type){
+        if (type == cocos2d::ui::Widget::TouchEventType::ENDED) {
+            soundEngineSE->playEffect(touch);
+            this->removeFromParentAndCleanup(true);
+        }
+    });
+    this->addChild(button,0);
+
     
+    
+    // モーダル処理
+    auto listener = EventListenerTouchOneByOne::create();
+    listener->setSwallowTouches(true);
+    listener->onTouchBegan = [this](Touch *oneTouch,Event*event)->bool{
+        return true;
+    };
     auto dispatcher = Director::getInstance()->getEventDispatcher();
     dispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     

@@ -27,6 +27,7 @@ public:
     int _gameFeadCount;
     int _chartBoostCount;
 
+
     // 値の初期化
     void initialize();
     
@@ -35,5 +36,7 @@ public:
     bool isGameFeadOpen();
     // ChartBoostの広告を表示させるかどうかの処理
     bool isChartBoostOpen();
+    //チュートリアルすでに出ているかどうか
+    CC_SYNTHESIZE(bool, _tutorialOpend, TutorialOpend);
 };
 #endif /* Helper_hpp */
