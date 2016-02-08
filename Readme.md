@@ -3,7 +3,7 @@
 「何もしてないのに修羅場」
 ======================
 # IOS
-申請中
+<https://appsto.re/jp/SAE1_.i>
 
 # Android
 <https://play.google.com/store/apps/details?id=org.cocos2dx.SyuraApp>
