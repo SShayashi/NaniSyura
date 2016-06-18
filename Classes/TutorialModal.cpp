@@ -35,12 +35,30 @@ bool TutorialModal::init()
     blend.dst = GL_SRC_COLOR;
     backpaper->setBlendFunc(blend);
     this -> addChild(backpaper);
+    
+    
+    // モーダル処理
+    auto listener = EventListenerTouchOneByOne::create();
+    listener->setSwallowTouches(true);
+    listener->onTouchBegan = [this](Touch *oneTouch,Event*event)->bool{
+        return true;
+    };
+    auto dispatcher = Director::getInstance()->getEventDispatcher();
+    dispatcher->addEventListenerWithSceneGraphPriority(listener, this);
+    
+    return true;
+}
+
+void TutorialModal::onEnterTransitionDidFinish()
+{
+    Size winSize = Director::getInstance()->getVisibleSize();
+    Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
     auto tutorial = Sprite::create("tutorial.png");
     tutorial->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
     tutorial->setPosition(winSize / 2);
     this -> addChild(tutorial);
-
+    
     /*ボタンの設置*/
     //閉じるボタンの設定
     auto button = ui::Button::create();
@@ -60,19 +78,23 @@ bool TutorialModal::init()
         }
     });
     this->addChild(button,0);
+    
+
+    //開始！
+    //アニメーションを作成　ScaleTo::create(時間, 比率);
+    auto action = ScaleTo::create(0.5, 1);
+    tutorial->setScale(1/10);
+    
+    auto button_action = ScaleTo::create(0.01, 1);
+    auto button_delay = DelayTime::create(0.5);
+    button->setScale(0.1);
+    //アニメーション開始
+    tutorial->runAction(action);
+    button->runAction(Sequence::create(button_delay,button_action, NULL));
 
     
+
     
-    // モーダル処理
-    auto listener = EventListenerTouchOneByOne::create();
-    listener->setSwallowTouches(true);
-    listener->onTouchBegan = [this](Touch *oneTouch,Event*event)->bool{
-        return true;
-    };
-    auto dispatcher = Director::getInstance()->getEventDispatcher();
-    dispatcher->addEventListenerWithSceneGraphPriority(listener, this);
-    
-    return true;
 }
 
 /**

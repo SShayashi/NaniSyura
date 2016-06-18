@@ -28,7 +28,7 @@ protected:
     void pushMenu(Ref* pSender);
     void iconHide(Ref* pSender);
     void iconShow(Ref* pSender);
-    
+    void onEnterTransitionDidFinish();
     enum {
         tag_gamefeat = 1,
         tag_next
